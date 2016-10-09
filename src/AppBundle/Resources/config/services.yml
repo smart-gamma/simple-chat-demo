@@ -1,0 +1,14 @@
+services:
+    app.chat_message_handler:
+        class: AppBundle\Services\Websocket\ChatMessageHandler
+        calls:
+            - [setPushpinHelper, ["@gamma.pushpin.pushpin_helper"]]
+        tags:
+            - { name: gamma.pushpin.grip_event_handler, type: chatMessage }
+
+    app.chat_room_enter_handler:
+        class: AppBundle\Services\Websocket\ChatRoomEnterHandler
+        calls:
+            - [setPushpinHelper, ["@gamma.pushpin.pushpin_helper"]]
+        tags:
+            - { name: gamma.pushpin.grip_event_handler, type: chatRoomEnter }
