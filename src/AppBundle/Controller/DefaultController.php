@@ -17,6 +17,10 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return [];
+        return ['webSocketServer' => sprintf(
+            'ws://%s:7999%s',
+            $this->getParameter('domain'),
+            $this->generateUrl('app_websocket_chat_message'))
+        ];
     }
 }

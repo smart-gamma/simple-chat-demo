@@ -45,7 +45,8 @@
 {% block javascripts %}
     {{ parent() }}
     <script type="text/javascript">
-        connection = new WebSocket('ws://ws-chat.local:7999/websocket/chat');
+//        connection = new WebSocket('ws://ws-chat.local:7999/websocket/chat');
+        connection = new WebSocket('{{ webSocketServer }}');
         connection.onopen = function() {
             var init = {
                 room:"default"

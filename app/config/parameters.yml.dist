@@ -10,3 +10,4 @@ parameters:
     mailer_password:   ~
     secret:            ThisTokenIsNotSoSecretChangeIt
     pushpin.control_uri: http://localhost:5561/
+    domain: ws-chat.smart-gamma.com
