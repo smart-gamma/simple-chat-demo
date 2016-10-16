@@ -1,13 +1,13 @@
 <?php
 namespace AppBundle\Services\Websocket;
 
-use Domain\WebsocketEvents\Chat\ChatMessage;
+use Domain\WebsocketEvents\Chat\ChatRoomLeave;
 use Gamma\Pushpin\PushpinBundle\Events\Base\AbstractEvent;
 use Gamma\Pushpin\PushpinBundle\Handlers\Base\AbstractEventHandler;
 use Gamma\Pushpin\PushpinBundle\Interfaces\Events\TextEventInterface;
 use Gamma\Pushpin\PushpinBundle\Services\PushpinHelper;
 
-class ChatMessageHandler extends AbstractEventHandler
+class ChatRoomLeaveHandler extends AbstractEventHandler
 {
     const EVENT_TYPE = TextEventInterface::EVENT_TYPE;
 
@@ -19,21 +19,17 @@ class ChatMessageHandler extends AbstractEventHandler
     /**
      * @param PushpinHelper $pushpinHelper
      */
-    public function setPushpinHelper(PushpinHelper $pushpinHelper)
+    public function setPushpinHelper($pushpinHelper)
     {
         $this->pushpinHelper = $pushpinHelper;
     }
-    
+
     /**
      * @inheritdoc
      */
     public function handle(AbstractEvent $event)
     {
-        /** @var ChatMessage $event */
-        $this->pushpinHelper->sendWsMessageToChannel($event, json_encode([
-                'room' => $event->room,
-                'comment' => htmlspecialchars($event->comment),
-            ], JSON_UNESCAPED_UNICODE)
-        );
+        /** @var ChatRoomLeave $event */
+        return $this->pushpinHelper->unSubscribeFromChannel($event);
     }
 }

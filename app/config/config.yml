@@ -79,3 +79,5 @@ gamma_pushpin:
                     class: 'Chat\ChatMessage'
                 chatRoomEnter:
                     class: 'Chat\ChatRoomEnter'
+                chatRoomLeave:
+                    class: 'Chat\ChatRoomLeave'

@@ -11,22 +11,7 @@
                 </div>
             </form>
         </div>
-        <hr class="spacer-10"/>
-        <div id="chat-rooms" class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <ul id="room-tabs" class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#room-default">Default</a></li>
-                </ul>
-                <div id="room-tabs-content" class="tab-content">
-                    <div id="room-default" class="tab-pane fade in active">
-                        <div class="room-messages" id="default-messages">
-                            <small>Messages from Default</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr class="spacer-10"/>
+        <br>
         <div id="message" class="row">
             <form class="span12">
                 <div class="input-group">
@@ -36,6 +21,22 @@
                 </span>
                 </div>
             </form>
+        </div>
+        <hr class="spacer-10"/>
+        <div id="chat-rooms" class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <ul id="room-tabs" class="nav nav-tabs">
+                    <li class="active" data-chatroom="default" ><a data-toggle="tab" href="#room-default">Default</a></li>
+                </ul>
+                <div id="room-tabs-content" class="tab-content">
+                    <div id="room-default" class="tab-pane fade in active">
+                        <small>Messages from Default</small>
+                        <div class="room-messages" id="default-messages">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -52,8 +53,10 @@
             connection.send("chatRoomEnter:"+JSON.stringify(init));
         };
         connection.onmessage = function(event) {
-            console.log(event.data);
+            displayNewMessage(event.data);
         };
     </script>
+    <script src="{{ asset("bundles/app/js/chat.main.js") }}"></script>
     <script src="{{ asset("bundles/app/js/chat.tabs.js") }}"></script>
+    <script src="{{ asset("bundles/app/js/chat.buttons.js") }}"></script>
 {% endblock %}

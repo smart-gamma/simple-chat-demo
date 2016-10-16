@@ -924,12 +924,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/smart-gamma/pushpin-bundle.git",
-                "reference": "6d09f8a323ba22ff31be818b27b7abfec026e6df"
+                "reference": "21eeff445c71977de35176eebc42eb405dcdc455"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smart-gamma/pushpin-bundle/zipball/6d09f8a323ba22ff31be818b27b7abfec026e6df",
-                "reference": "6d09f8a323ba22ff31be818b27b7abfec026e6df",
+                "url": "https://api.github.com/repos/smart-gamma/pushpin-bundle/zipball/21eeff445c71977de35176eebc42eb405dcdc455",
+                "reference": "21eeff445c71977de35176eebc42eb405dcdc455",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +969,7 @@
                 "source": "https://github.com/smart-gamma/pushpin-bundle/tree/develop",
                 "issues": "https://github.com/smart-gamma/pushpin-bundle/issues"
             },
-            "time": "2016-10-09 13:32:15"
+            "time": "2016-10-16 15:20:54"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1505,16 +1505,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0"
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/5277094ed527a1c4477177d102fe4c53551953e0",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
                 "shasum": ""
             },
             "require": {
@@ -1548,7 +1548,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-09-19 16:02:08"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -2421,16 +2421,16 @@
     "packages-dev": [
         {
             "name": "sensio/generator-bundle",
-            "version": "v3.0.8",
+            "version": "v3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "3c20d16512f37d2be159eca0411b99a141b90fa4"
+                "reference": "b9be7f1b3b2e8bcfc1debefc901b71da923a5e5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/3c20d16512f37d2be159eca0411b99a141b90fa4",
-                "reference": "3c20d16512f37d2be159eca0411b99a141b90fa4",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/b9be7f1b3b2e8bcfc1debefc901b71da923a5e5c",
+                "reference": "b9be7f1b3b2e8bcfc1debefc901b71da923a5e5c",
                 "shasum": ""
             },
             "require": {
@@ -2469,7 +2469,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2016-09-06 01:30:19"
+            "time": "2016-10-10 14:17:42"
         },
         {
             "name": "symfony/phpunit-bridge",

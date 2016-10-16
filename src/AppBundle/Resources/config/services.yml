@@ -12,3 +12,10 @@ services:
             - [setPushpinHelper, ["@gamma.pushpin.pushpin_helper"]]
         tags:
             - { name: gamma.pushpin.grip_event_handler, type: chatRoomEnter }
+
+    app.chat_room_leave_handler:
+        class: AppBundle\Services\Websocket\ChatRoomLeaveHandler
+        calls:
+            - [setPushpinHelper, ["@gamma.pushpin.pushpin_helper"]]
+        tags:
+            - { name: gamma.pushpin.grip_event_handler, type: chatRoomLeave }
