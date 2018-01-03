@@ -1,4 +1,5 @@
 <?php
+
 namespace AppBundle\Services\Websocket;
 
 use Domain\WebsocketEvents\Chat\ChatRoomLeave;
@@ -25,11 +26,11 @@ class ChatRoomLeaveHandler extends AbstractEventHandler
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function handle(AbstractEvent $event)
     {
-        /** @var ChatRoomLeave $event */
+        /* @var ChatRoomLeave $event */
         return $this->pushpinHelper->unSubscribeFromChannel($event);
     }
 }

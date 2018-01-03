@@ -1,4 +1,5 @@
 <?php
+
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -11,8 +12,9 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="app_default_index")
      * @Template()
+     *
      * @param Request $request
-     * 
+     *
      * @return array
      */
     public function indexAction(Request $request)
@@ -20,7 +22,8 @@ class DefaultController extends Controller
         return ['webSocketServer' => sprintf(
             'ws://%s:7999%s',
             $this->getParameter('domain'),
-            $this->generateUrl('app_websocket_chat_message'))
+            $this->generateUrl('app_websocket_chat_message')
+        ),
         ];
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace AppBundle\Controller;
 
 use Gamma\Pushpin\PushpinBundle\Controller\GripController;
@@ -10,13 +11,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 class ChatController extends GripController
 {
-
     /**
      * @Route("/websocket/chat", name="app_websocket_chat_message")
-     * @param Request $request
+     *
+     * @param Request            $request
      * @param WebSocketEventsDTO $inputEvents
      *
      * @ParamConverter("inputEvents", converter="gamma.web_socket.events", options={"format": "json"})
+     *
      * @return Response
      */
     public function chatMessageAction(Request $request, WebSocketEventsDTO $inputEvents)

@@ -1,4 +1,5 @@
 <?php
+
 namespace AppBundle\Services\Websocket;
 
 use Domain\WebsocketEvents\Chat\ChatRoomEnter;
@@ -25,11 +26,11 @@ class ChatRoomEnterHandler extends AbstractEventHandler
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function handle(AbstractEvent $event)
     {
-        /** @var ChatRoomEnter $event */
+        /* @var ChatRoomEnter $event */
         return [
             $this->pushpinHelper->subscribeToChannel($event),
             $this->pushpinHelper->generateTextEvent('subscribed'),

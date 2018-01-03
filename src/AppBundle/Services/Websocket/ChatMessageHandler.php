@@ -1,4 +1,5 @@
 <?php
+
 namespace AppBundle\Services\Websocket;
 
 use Domain\WebsocketEvents\Chat\ChatMessage;
@@ -23,14 +24,16 @@ class ChatMessageHandler extends AbstractEventHandler
     {
         $this->pushpinHelper = $pushpinHelper;
     }
-    
+
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function handle(AbstractEvent $event)
     {
-        /** @var ChatMessage $event */
-        $this->pushpinHelper->sendWsMessageToChannel($event, json_encode([
+        /* @var ChatMessage $evr installent */
+        $this->pushpinHelper->sendWsMessageToChannel(
+            $event,
+            json_encode([
                 'room' => $event->room,
                 'comment' => htmlspecialchars($event->comment),
             ], JSON_UNESCAPED_UNICODE)
