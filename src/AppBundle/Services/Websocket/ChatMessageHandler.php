@@ -6,23 +6,25 @@ use Domain\WebsocketEvents\Chat\ChatMessage;
 use Gamma\Pushpin\PushpinBundle\Events\Base\AbstractEvent;
 use Gamma\Pushpin\PushpinBundle\Handlers\Base\AbstractEventHandler;
 use Gamma\Pushpin\PushpinBundle\Interfaces\Events\TextEventInterface;
-use Gamma\Pushpin\PushpinBundle\Services\PushpinHelper;
+use Gamma\Pushpin\PushpinBundle\Services\MessagePublisher;
 
 class ChatMessageHandler extends AbstractEventHandler
 {
     const EVENT_TYPE = TextEventInterface::EVENT_TYPE;
 
     /**
-     * @var PushpinHelper
+     * @var MessagePublisher
      */
-    private $pushpinHelper;
+    private $messagePublisher;
 
     /**
-     * @param PushpinHelper $pushpinHelper
+     * ChatMessageHandler constructor.
+     *
+     * @param MessagePublisher $messagePublisher
      */
-    public function setPushpinHelper(PushpinHelper $pushpinHelper)
+    public function __construct(MessagePublisher $messagePublisher)
     {
-        $this->pushpinHelper = $pushpinHelper;
+        $this->messagePublisher = $messagePublisher;
     }
 
     /**
@@ -30,8 +32,8 @@ class ChatMessageHandler extends AbstractEventHandler
      */
     public function handle(AbstractEvent $event)
     {
-        /* @var ChatMessage $evr installent */
-        $this->pushpinHelper->sendWsMessageToChannel(
+        /* @var ChatMessage $event */
+        $this->messagePublisher->publishWebSocketMessage(
             $event,
             json_encode([
                 'room' => $event->room,

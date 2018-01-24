@@ -1,0 +1,35 @@
+{% extends "@App/base.html.twig" %}
+{% block body %}
+    <section class="content" xmlns="http://www.w3.org/1999/html">
+        <div id="message" class="row">
+            {{ form_start(form, {'attr':{'id':'send-form'}}) }}
+                <div class="input-group">
+                    {{ form_widget(form.content, {'attr':{'class':'form-control', 'placeholder':'Say something'}}) }}
+
+                    {{ form_rest(form) }}
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info"><i class="glyphicon glyphicon-send"></i></button>
+                    </span>
+                </div>
+            {{ form_end(form) }}
+        </div>
+        <hr class="spacer-10"/>
+        <div id="chat-rooms" class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div id="room-default" class="tab-pane fade in active">
+                    <div class="room-messages" id="default-messages">
+                        <!-- Messages starting here !-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset("build/http-chat.js") }}"></script>
+    <script type="text/javascript">
+        connect('{{ streamUri }}', 'send-form', '{{ postUrl }}');
+    </script>
+{% endblock %}

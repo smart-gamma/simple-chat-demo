@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <title>{% block title %}Chat{% endblock %}</title>
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset("assets/vendor/bootstrap/dist/css/bootstrap.min.css") }}">
-        <link rel="stylesheet" href="{{ asset("assets/vendor/bootstrap/dist/css/bootstrap-theme.css") }}">
+        <link rel="stylesheet" href="{{ asset('build/vendor.css') }}" />
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
@@ -22,11 +21,9 @@
     {% block body %}{% endblock %}
 </div>
 {% block javascripts %}
-    <script src="{{ asset("assets/vendor/jquery/dist/jquery.min.js") }}"></script>
-    <script src="{{ asset("assets/vendor/bootstrap/dist/js/bootstrap.min.js") }}"></script>
-
+    <script src="{{ asset('build/manifest.js') }}"></script>
+    <script src="{{ asset('build/vendor.js') }}"></script>
 {% endblock %}
-
 </body>
 </html>
 

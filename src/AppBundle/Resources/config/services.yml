@@ -1,8 +1,8 @@
 services:
     app.chat_message_handler:
         class: AppBundle\Services\Websocket\ChatMessageHandler
-        calls:
-            - [setPushpinHelper, ["@gamma.pushpin.pushpin_helper"]]
+        arguments:
+            - "@gamma.pushpin.message_publisher"
         tags:
             - { name: gamma.pushpin.grip_event_handler, type: chatMessage }
 

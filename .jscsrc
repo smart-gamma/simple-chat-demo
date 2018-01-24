@@ -1,0 +1,7 @@
+{
+    "preset": "jquery",
+    "requireCurlyBraces": false,
+    "requireSpacesInsideParentheses": false,
+    "requireSpacesInsideBrackets": false,
+    "disallowSpacesInsideParentheses": { "only": [ "{", "}", "\"" ] }
+}

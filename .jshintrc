@@ -1,0 +1,9 @@
+{
+  "undef": true,
+  "node": true,
+  "browser": true,
+  "unused": true,
+  "globals": {
+    "MY_GLOBAL": true
+  }
+}

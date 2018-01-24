@@ -1,12 +1,12 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
+lock '3.10.1'
 
 set :application, 'ws-chat'
 set :repo_url, 'https://github.com/smart-gamma/simple-chat-demo'
 
 set :branch, 'master'
 
-set :deploy_to, '/home/ws-chat'
+set :deploy_to, '/home/webuser/chat'
 set :symfony_env,  "prod"
 set :sensio_distribution_version, 5
 
