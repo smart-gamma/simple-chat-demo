@@ -32,8 +32,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "/home/stas/projects/pushpin-bundle/"
+            "type": "vcs",
+            "url": "git@bitbucket.org:stas_zozulja/pushpin-bundle.git"
         }
     ],
     "scripts": {

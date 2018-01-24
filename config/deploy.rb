@@ -2,7 +2,7 @@
 lock '3.10.1'
 
 set :application, 'ws-chat'
-set :repo_url, 'https://github.com/smart-gamma/simple-chat-demo'
+set :repo_url, 'git@bitbucket.org:stas_zozulja/simple-chat-demo.git'
 
 set :branch, 'master'
 
