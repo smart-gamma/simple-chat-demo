@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d543cc5c94ea903161cf3f43ac796239",
+    "content-hash": "23e8194162cc78dcd2dc0a9a4a34edf9",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -718,11 +718,10 @@
             "name": "gamma/pushpin-bundle",
             "version": "dev-develop",
             "target-dir": "Gamma/Pushpin",
-            "dist": {
-                "type": "path",
-                "url": "/home/stas/projects/pushpin-bundle",
-                "reference": "a2c5ac78d7e091142d15fa36505f665aad50e4f5",
-                "shasum": null
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:stas_zozulja/pushpin-bundle.git",
+                "reference": "6138de00f3260206449b3f17519e838a3d572f21"
             },
             "require": {
                 "doctrine/common": "^2.7",
@@ -754,7 +753,8 @@
             "description": "Pushpin proxy integration for Symfony applications",
             "keywords": [
                 "pushpin bundle"
-            ]
+            ],
+            "time": "2018-01-24T12:50:20+00:00"
         },
         {
             "name": "incenteev/composer-parameter-handler",
