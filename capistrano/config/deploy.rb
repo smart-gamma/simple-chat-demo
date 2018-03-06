@@ -29,12 +29,11 @@ set :linked_files, []
 
 set :file_permissions_paths, ["var"]
 set :permission_method, :acl
-set :file_permissions_paths, ["var/logs", "var/cache"]
+set :file_permissions_paths, ["var/logs", "var/cache", "var/sessions"]
 set :file_permissions_users, ["www-data"]
 
 set :symfony_directory_structure, 3
 
-set :scm, :git
 set :format, :airbrussh
 
 set :format_options, command_output: true, log_file: 'log/capistrano.log', color: :auto, truncate: :auto
@@ -49,3 +48,4 @@ set :log_level, :debug
 
 after "deploy:starting", "composer:install_executable"
 before "deploy:updated", "deploy:set_permissions:acl"
+after "deploy:publishing", "yarn:build"

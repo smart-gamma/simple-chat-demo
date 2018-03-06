@@ -24,18 +24,12 @@
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^5.1",
         "incenteev/composer-parameter-handler": "^2.0",
-        "gamma/pushpin-bundle" : "dev-develop"
+        "stas-zozulja/pushpin-bundle" : "dev-develop"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@bitbucket.org:stas_zozulja/pushpin-bundle.git"
-        }
-    ],
     "scripts": {
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
