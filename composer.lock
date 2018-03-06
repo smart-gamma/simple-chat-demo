@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8295f2b1b6e823e8465008e6ebdc9238",
+    "content-hash": "6d697b79234a37f316c233b140dc8a63",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1566,17 +1566,17 @@
         },
         {
             "name": "stas-zozulja/pushpin-bundle",
-            "version": "dev-develop",
+            "version": "v0.1.3",
             "target-dir": "Gamma/Pushpin",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stas-zozulja/pushpin-bundle.git",
-                "reference": "f9c18b6e7bc4295b5f7347fc1c6e2d535fe4aa32"
+                "reference": "8ef17d45cada833ab846fc05b22c85607d17cf55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stas-zozulja/pushpin-bundle/zipball/f9c18b6e7bc4295b5f7347fc1c6e2d535fe4aa32",
-                "reference": "f9c18b6e7bc4295b5f7347fc1c6e2d535fe4aa32",
+                "url": "https://api.github.com/repos/stas-zozulja/pushpin-bundle/zipball/8ef17d45cada833ab846fc05b22c85607d17cf55",
+                "reference": "8ef17d45cada833ab846fc05b22c85607d17cf55",
                 "shasum": ""
             },
             "require": {
@@ -1611,7 +1611,7 @@
             "keywords": [
                 "pushpin bundle"
             ],
-            "time": "2018-03-06T20:13:33+00:00"
+            "time": "2018-03-06T21:21:52+00:00"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -2358,9 +2358,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "stas-zozulja/pushpin-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
